@@ -11,6 +11,7 @@ import java.util.List;
 @Table(name = "ruta", indexes = {
         @Index(name = "idx_origen_destino", columnList = "origen, destino")
 })
+
 public class Ruta {
 
     @Id

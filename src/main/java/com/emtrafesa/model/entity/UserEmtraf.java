@@ -4,6 +4,7 @@ import com.emtrafesa.model.enums.TipoUsuario;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
@@ -25,5 +26,11 @@ public class UserEmtraf {
     @Enumerated(EnumType.STRING)
     @Column(name = "tipo_usuario", length = 10)
     private TipoUsuario tipoUsuario;
+
+    @Column(name = "reset_token", length = 255)
+    private String resetToken;
+
+    @Column(name = "token_expiration")
+    private LocalDateTime tokenExpiration;
 
 }
